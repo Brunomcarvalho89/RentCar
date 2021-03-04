@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="build">
+      </df>
+      <df name="ext">
+      </df>
+      <df name="includes">
+        <df name="application">
+          <df name="repository">
+            <in>CarClassificationRepository.hpp</in>
+            <in>CarRepository.hpp</in>
+            <in>ClientRepository.hpp</in>
+            <in>VehicleMaintenanceRepository.hpp</in>
+          </df>
+        </df>
+        <df name="domain">
+          <df name="repository">
+            <in>AbstractCarClassificationRepository.hpp</in>
+            <in>AbstractCarRepository.hpp</in>
+            <in>AbstractClientRepository.hpp</in>
+            <in>AbstractVehicleMaintenanceRepository.hpp</in>
+          </df>
+          <df name="service">
+            <df name="impl">
+              <in>AddressFactory.hpp</in>
+              <in>CarFactory.hpp</in>
+              <in>ClientFactory.hpp</in>
+              <in>LegalPersonBuilder.hpp</in>
+              <in>NaturalPersonBuilder.hpp</in>
+            </df>
+            <in>AbstractAddressFactory.hpp</in>
+            <in>AbstractCarFactory.hpp</in>
+            <in>AbstractClientFactory.hpp</in>
+            <in>PersonBuilder.hpp</in>
+          </df>
+          <in>Address.hpp</in>
+          <in>Car.hpp</in>
+          <in>CarClassification.hpp</in>
+          <in>CarRentalAgreement.hpp</in>
+          <in>Client.hpp</in>
+          <in>DailyPrice.hpp</in>
+          <in>InsurancePrice.hpp</in>
+          <in>LegalPerson.hpp</in>
+          <in>MaintenancePrice.hpp</in>
+          <in>NaturalPerson.hpp</in>
+          <in>Person.hpp</in>
+          <in>RentalPeriod.hpp</in>
+          <in>Vehicle.hpp</in>
+          <in>VehicleMaintenance.hpp</in>
+        </df>
+      </df>
+      <df name="plantuml">
+        <df name="svg">
+        </df>
+      </df>
+      <df name="src">
+        <df name="application">
+          <df name="repository">
+            <in>CarClassificationRepository.cpp</in>
+            <in>CarRepository.cpp</in>
+            <in>ClientRepository.cpp</in>
+            <in>VehicleMaintenanceRepository.cpp</in>
+          </df>
+          <in>main.cpp</in>
+        </df>
+        <df name="domain">
+          <df name="service">
+            <df name="impl">
+              <in>AddressFactory.cpp</in>
+              <in>CarFactory.cpp</in>
+              <in>ClientFactory.cpp</in>
+              <in>LegalPersonBuilder.cpp</in>
+              <in>NaturalPersonBuilder.cpp</in>
+            </df>
+            <in>AbstractCarFactory.cpp</in>
+            <in>AbstractClientFactory.cpp</in>
+            <in>PersonBuilder.cpp</in>
+          </df>
+          <in>Address.cpp</in>
+          <in>Car.cpp</in>
+          <in>CarClassification.cpp</in>
+          <in>CarRentalAgreement.cpp</in>
+          <in>Client.cpp</in>
+          <in>DailyPrice.cpp</in>
+          <in>InsurancePrice.cpp</in>
+          <in>LegalPerson.cpp</in>
+          <in>MaintenancePrice.cpp</in>
+          <in>NaturalPerson.cpp</in>
+          <in>Person.cpp</in>
+          <in>RentalPeriod.cpp</in>
+          <in>Vehicle.cpp</in>
+          <in>VehicleMaintenance.cpp</in>
+        </df>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile></projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>./build/RentCar</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>./build/RentCar</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

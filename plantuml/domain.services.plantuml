@@ -1,0 +1,85 @@
+@startuml
+package "domain.service" {
+
+class AbstractAddressFactory {
+    +virtual std::shared_ptr<Address> get(int id,std::string addressDescription,std::string addressComplement,std::string numberAddress,
+            std::string zipCode,std::string city,std::string state,std::string country) = 0;
+}
+abstract        AbstractAddressFactory
+
+class AbstractCarFactory {
+    +virtual std::shared_ptr<Car> get(int id,std::string brand,std::string model,std::string description,
+            std::string color,std::string registrationPlate,std::string renavan,int year) = 0;
+}
+
+abstract        AbstractCarFactory
+
+class AbstractClientFactory {
+    +virtual std::shared_ptr<Client> get(int id,std::shared_ptr<Person> person, 
+            std::shared_ptr<Address> address) = 0;
+}
+
+abstract        AbstractClientFactory
+
+class PersonBuilder {
+    +virtual std::shared_ptr<PersonBuilder> withId(int id) = 0;
+    +virtual std::shared_ptr<PersonBuilder> withName(std::string name) = 0;
+    +virtual std::shared_ptr<PersonBuilder> withDateOfBirth(tm* dateOfbirth) = 0;
+    +virtual std::shared_ptr<PersonBuilder> withIdentificationNumber(std::string identificationNumber) = 0;
+    +virtual std::shared_ptr<Person> build() = 0;
+}
+
+abstract        PersonBuilder
+
+class AddressFactory {
+    +std::shared_ptr<Address> get(int id,std::string addressDescription,std::string addressComplement,std::string numberAddress,
+            std::string zipCode,std::string city,std::string state,std::string country);
+}
+
+AbstractAddressFactory <|-- AddressFactory
+
+class CarFactory {
+    +CarFactory()
+    +std::shared_ptr<Car> get(int id, std::string brand, std::string model, std::string description, std::string color, std::string registrationPlate, std::string renavan, int year)
+}
+
+AbstractCarFactory <|-- CarFactory
+
+class ClientFactory  {
+    +ClientFactory()
+    +std::shared_ptr<Client> get(int id,std::shared_ptr<Person> person, std::shared_ptr<Address> address)
+}
+
+AbstractClientFactory <|-- ClientFactory
+
+class LegalPersonBuilder {
+    -std::shared_ptr<LegalPerson> legalPerson
+    +LegalPersonBuilder()
+    +virtual ~LegalPersonBuilder()
+    +std::shared_ptr<PersonBuilder> withId(int id)
+    +std::shared_ptr<PersonBuilder> withName(std::string name)
+    +std::shared_ptr<PersonBuilder> withDateOfBirth(tm* dateOfbirth)
+    +std::shared_ptr<PersonBuilder> withIdentificationNumber(std::string identificationNumber)
+    +std::shared_ptr<Person> build()
+}
+
+PersonBuilder <|-- LegalPersonBuilder
+std::enable_shared_from_this <|-- LegalPersonBuilder 
+
+
+class NaturalPersonBuilder  {
+    -std::shared_ptr<NaturalPerson> naturalPerson
+    +NaturalPersonBuilder()
+    +virtual ~NaturalPersonBuilder()
+    +std::shared_ptr<PersonBuilder> withId(int id)
+    +std::shared_ptr<PersonBuilder> withName(std::string name)
+    +std::shared_ptr<PersonBuilder> withDateOfBirth(tm* dateOfbirth)
+    +std::shared_ptr<PersonBuilder> withIdentificationNumber(std::string identificationNumber)
+    +std::shared_ptr<Person> build()
+}
+
+PersonBuilder <|-- NaturalPersonBuilder
+std::enable_shared_from_this <|-- NaturalPersonBuilder 
+
+}
+@enduml

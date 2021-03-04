@@ -1,0 +1,32 @@
+@startuml
+package "domain.repository" {
+
+class AbstractCarClassificationRepository {
+    +virtual std::shared_ptr<CarClassification> getByID(int id) = 0
+}
+
+abstract   AbstractCarClassificationRepository
+
+class AbstractCarRepository {
+    +virtual void add(std::shared_ptr<Car> car) = 0
+    +virtual std::shared_ptr<Car> getByID(int id) = 0
+}
+
+abstract   AbstractCarRepository
+
+class AbstractClientRepository {
+    +virtual void add(std::shared_ptr<Client> person) = 0
+    +virtual std::shared_ptr<Client> getByID(int id) = 0
+}
+
+abstract   AbstractClientRepository
+
+class AbstractVehicleMaintenanceRepository {
+    +virtual void add(std::shared_ptr<VehicleMaintenance> person) = 0;
+    +virtual std::shared_ptr<VehicleMaintenance> getByID(int id) = 0;
+}
+
+abstract   AbstractVehicleMaintenanceRepository
+
+}
+@enduml

@@ -1,0 +1,45 @@
+@startuml
+package "application.repository" {
+
+class CarClassificationRepository {
+    -std::vector<std::shared_ptr<CarClassification>> repository
+    -std::shared_ptr<CarClassification> classificationNC
+
+    +CarClassificationRepository()
+    +~CarClassificationRepository()
+    +virtual std::shared_ptr<CarClassification> getByID(int id)
+}
+
+AbstractCarClassificationRepository <|-- CarClassificationRepository
+
+class CarRepository {
+    -std::vector<std::shared_ptr<Car>> repository
+
+    +CarRepository()
+    +~CarRepository()
+    +virtual std::shared_ptr<Car> getByID(int id)
+}
+
+AbstractCarRepository <|-- CarRepository
+
+class ClientRepository {
+    -std::vector<std::shared_ptr<Client>> repository
+    +ClientRepository()
+    +~ClientRepository()
+    +virtual std::shared_ptr<Client> getByID(int id)
+}
+
+AbstractClientRepository <|-- ClientRepository
+
+class VehicleMaintenanceRepository {
+    -std::vector<std::shared_ptr<VehicleMaintenance>> repository
+    +VehicleMaintenanceRepository()
+    +~VehicleMaintenanceRepository()
+    +virtual std::shared_ptr<VehicleMaintenance> getByID(int id)
+}
+
+AbstractVehicleMaintenanceRepository <|-- VehicleMaintenanceRepository
+
+
+}
+@enduml

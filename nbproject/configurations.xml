@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="src">
+        <df name="application">
+          <df name="repository">
+            <in>CarClassificationRepository.cpp</in>
+            <in>CarRepository.cpp</in>
+            <in>ClientRepository.cpp</in>
+            <in>VehicleMaintenanceRepository.cpp</in>
+          </df>
+          <in>main.cpp</in>
+        </df>
+        <df name="domain">
+          <df name="service">
+            <df name="impl">
+              <in>AddressFactory.cpp</in>
+              <in>CarFactory.cpp</in>
+              <in>ClientFactory.cpp</in>
+              <in>LegalPersonBuilder.cpp</in>
+              <in>NaturalPersonBuilder.cpp</in>
+            </df>
+            <in>AbstractCarFactory.cpp</in>
+            <in>AbstractClientFactory.cpp</in>
+            <in>PersonBuilder.cpp</in>
+          </df>
+          <in>Address.cpp</in>
+          <in>Car.cpp</in>
+          <in>CarClassification.cpp</in>
+          <in>CarRentalAgreement.cpp</in>
+          <in>Client.cpp</in>
+          <in>DailyPrice.cpp</in>
+          <in>InsurancePrice.cpp</in>
+          <in>LegalPerson.cpp</in>
+          <in>MaintenancePrice.cpp</in>
+          <in>NaturalPerson.cpp</in>
+          <in>Person.cpp</in>
+          <in>RentalPeriod.cpp</in>
+          <in>Vehicle.cpp</in>
+          <in>VehicleMaintenance.cpp</in>
+        </df>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Arquivos Importantes"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile></projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0"
+                 commonFlags="-mtune=generic -march=x86-64 -std=gnu++14 -fstack-protector-strong"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>build</buildCommandWorkingDir>
+          <buildCommand>../ext/build.sh</buildCommand>
+          <cleanCommand>../ext/build.sh clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>build</preBuildCommandWorkingDir>
+          <preBuildCommand>${CMAKE} -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=${IDE_CC} -DCMAKE_CXX_COMPILER=${IDE_CXX} -DCMAKE_C_FLAGS_DEBUG="-g3 -gdwarf-2" -DCMAKE_CXX_FLAGS_DEBUG="-g3 -gdwarf-2" -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_SHARED_LIBS=ON ..</preBuildCommand>
+          <preBuildFirst>true</preBuildFirst>
+        </preBuild>
+      </makefileType>
+      <folder path="0/src/application/repository">
+        <ccTool>
+          <incDir>
+            <pElem>includes/domain/repository</pElem>
+            <pElem>src/application/repository</pElem>
+            <pElem>includes/application/repository</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <item path="src/application/main.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/application</pElem>
+            <pElem>includes/domain/service</pElem>
+            <pElem>includes/domain/service/impl</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes/application/repository</pElem>
+            <pElem>includes/domain/repository</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/application/repository/CarClassificationRepository.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/application/repository/CarRepository.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/application/repository/ClientRepository.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/application/repository/VehicleMaintenanceRepository.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/domain/Address.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/Car.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/CarClassification.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/CarRentalAgreement.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/Client.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/DailyPrice.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/InsurancePrice.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/LegalPerson.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/MaintenancePrice.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/NaturalPerson.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/Person.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/RentalPeriod.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/Vehicle.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/VehicleMaintenance.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/service/AbstractCarFactory.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain/service</pElem>
+            <pElem>includes/domain/service</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/service/AbstractClientFactory.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain/service</pElem>
+            <pElem>includes/domain/service</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/service/PersonBuilder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain/service</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/service/impl/AddressFactory.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/domain/service/impl</pElem>
+            <pElem>includes/domain/service/impl</pElem>
+            <pElem>includes/domain/service</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/service/impl/CarFactory.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>includes/domain/service</pElem>
+            <pElem>src/domain/service/impl</pElem>
+            <pElem>includes/domain/service/impl</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/service/impl/ClientFactory.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>includes/domain/service</pElem>
+            <pElem>src/domain/service/impl</pElem>
+            <pElem>includes/domain/service/impl</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/service/impl/LegalPersonBuilder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>includes/domain/service</pElem>
+            <pElem>src/domain/service/impl</pElem>
+            <pElem>includes/domain/service/impl</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/domain/service/impl/NaturalPersonBuilder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>includes/domain/service</pElem>
+            <pElem>src/domain/service/impl</pElem>
+            <pElem>includes/domain/service/impl</pElem>
+            <pElem>includes/domain</pElem>
+            <pElem>includes</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

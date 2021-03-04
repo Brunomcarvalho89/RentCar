@@ -1,0 +1,193 @@
+@startuml
+package "domain" {
+
+class CarRentalAgreement {
+-int id
+-std::shared_ptr<Client> client
+-std::shared_ptr<Car> car
+-std::shared_ptr<CarClassification> carClassification
+-std::shared_ptr<RentalPeriod> rentalPeriod
+-std::shared_ptr<DailyPrice> dailyPrice
+-std::shared_ptr<InsurancePrice> insurancePrice
+
++CarRentalAgreement( int id,std::shared_ptr<Client> client,std::shared_ptr<Car> car, std::shared_ptr<CarClassification> carClassification,
+std::shared_ptr<RentalPeriod> rentalPeriod, std::shared_ptr<DailyPrice> dailyPrice,std::shared_ptr<InsurancePrice> insurancePrice)
+
++virtual ~CarRentalAgreement()
++std::shared_ptr<Car> getCar()
++std::shared_ptr<CarClassification> getCarClassification()
++std::shared_ptr<Client> getClient()
++std::shared_ptr<DailyPrice> getDailyPrice()
++int getId()
++std::shared_ptr<InsurancePrice> getInsurancePrice()
++std::shared_ptr<RentalPeriod> getRentalPeriod()
++double calculateTotalValue()
+}
+
+
+
+
+class Vehicle {
+#int id
+#std::string brand
+#std::string model
+#std::string description
+#std::string color
+#std::string registrationPlate
+#int year
+
++Vehicle(int id, std::string brand, std::string model, std::string description, std::string color, std::string registrationPlate, int year)
++virtual ~Vehicle()
++int getId()
++std::string getModel()
+}
+
+
+class Car  {
++std::string renavan;
++Car(int id,std::string brand,std::string model,std::string description,std::string color,std::string registrationPlate,std::string renavan,int year)
++virtual ~Car();
+}
+
+Vehicle  <|--  Car
+
+class Client {
+
+#int id;
+#std::shared_ptr<Person> person
+#std::shared_ptr<Address> address
+
++Client(int id,std::shared_ptr<Person> person, std::shared_ptr<Address> address)
++virtual ~Client()
++int getId()
++std::shared_ptr<Address> getAddress()
++std::shared_ptr<Person> getPerson()
+}
+
+class CarClassification {
+
+-int id
+-std::string name
+-std::string description
+
++CarClassification(int id, std::string name, std::string description)
++virtual ~CarClassification()
++int getId()
++std::string getDescription()
++std::string getName()
+}
+
+class RentalPeriod {
+-tm* contractStartDate
+-tm* contractTerminationDate
++RentalPeriod(tm* contractStartDate, tm* contractTerminationDate)
++virtual ~RentalPeriod()
++tm* getContractStartDate()
++tm* getContractTerminationDate()
+}
+
+class DailyPrice {
+-double price
++DailyPrice(double price)
++virtual ~DailyPrice()
++double getPrice()
++double calculateByDays(int days)
+}
+
+class InsurancePrice {
+-double value
++InsurancePrice(double value)
++virtual ~InsurancePrice()
++double getPrice()
+}
+
+CarRentalAgreement *-- Client
+CarRentalAgreement *-- Car
+CarRentalAgreement *-- CarClassification
+CarRentalAgreement *-- RentalPeriod
+CarRentalAgreement *-- DailyPrice
+CarRentalAgreement *-- InsurancePrice
+
+
+class Person {
+
+    #int id;
+    #std::string name;
+    #tm* dateOfbirth;
+
+    +Person()
+    +Person(int id, std::string name, tm* dateOfbirth)
+    +virtual ~Person()
+    +tm* getDateOfbirth()
+    +void setDateOfbirth(tm* dateOfbirth)
+    +int getId()
+    +void setId(int id)
+    +std::string getName()
+    +void setName(std::string name)
+}
+
+
+class LegalPerson  {
+
+    #std::string cnpj
+
+    +LegalPerson(int id, std::string name, tm* dateOfbirth, std::string cnpj)
+    +LegalPerson()
+    +virtual ~LegalPerson()
+    +std::string getCnpj()
+    +void setCnpj(std::string cnpj)
+}
+
+class NaturalPerson  {
+
+    #std::string cpf
+    +NaturalPerson(int id, std::string name, tm* dateOfbirth, std::string cpf)
+    +NaturalPerson()
+    +virtual ~NaturalPerson()
+    +std::string getCpf()
+    +void setCpf(std::string cpf)
+}
+
+Person <|-- NaturalPerson 
+Person <|-- LegalPerson
+
+Client *-- Person
+
+class Address {
+
+    -int id
+    -std::string addressDescription
+    -std::string addressComplement
+    -std::string numberAddress
+    -std::string zipCode
+    -std::string city
+    -std::string state
+    -std::string country
+
+    +Address(int id, std::string addressDescription, std::string addressComplement, std::string numberAddress, std::string zipCode,
+            std::string city,std::string state,std::string country)
+    +virtual ~Address()
+}
+
+Client *-- Address
+
+class VehicleMaintenance {
+    -int id
+    -std::shared_ptr<Car> car
+    -std::shared_ptr<MaintenancePrice> maintenancePrice
+    +VehicleMaintenance(int id, std::shared_ptr<Car> car, std::shared_ptr<MaintenancePrice> maintenancePrice)
+    +virtual ~VehicleMaintenance()
+    +int getId()
+}
+
+class MaintenancePrice {
+    -double price
+    +MaintenancePrice(double price)
+    +virtual ~MaintenancePrice()
+}
+
+VehicleMaintenance  *-- Car
+VehicleMaintenance  *-- MaintenancePrice
+
+}
+@enduml
