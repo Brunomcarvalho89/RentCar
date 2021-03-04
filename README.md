@@ -1,4 +1,4 @@
-## EXECUCAO - DENTRO DA PASTA -BUILD- EXECUTE OS COMANDO ABAIXO
+## DENTRO DA PASTA BUILD EXECUTE OS COMANDO ABAIXO
 
 ### Cria os arquivos de compilação do projeto - MakeFile
 cmake -G "Unix Makefiles" S ../ -B .
@@ -11,5 +11,5 @@ cmake -G "Unix Makefiles" S ../ -B .
 
 
 #### MODELAGEM
-#### No diretorio plantuml estão todos os scripts do plantuml para gerar o diagrama.
-#### No diretorio plantuml/svg estão todos os diagramas no formato svg, é possivel abrir pelo navegador.
+No diretorio plantuml estão todos os scripts do plantuml para gerar o diagrama.
+No diretorio plantuml/svg estão todos os diagramas no formato svg, é possivel abrir pelo navegador.
