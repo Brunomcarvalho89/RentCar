@@ -12,4 +12,4 @@ cmake -G "Unix Makefiles" S ../ -B .
 
 #### MODELAGEM
 No diretorio plantuml estão todos os scripts do plantuml para gerar o diagrama.
-No diretorio plantuml/svg estão todos os diagramas no formato svg, é possivel abrir pelo navegador.
+No diretorio plantuml/svg estão todos os diagramas no formato svg.
