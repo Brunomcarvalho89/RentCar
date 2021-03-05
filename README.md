@@ -1,3 +1,5 @@
+# Modelagem básica de uma locadora de veículos para práticar conhecimentos de C++.
+
 ## DENTRO DA PASTA BUILD EXECUTE OS COMANDO ABAIXO
 
 ### Cria os arquivos de compilação do projeto - MakeFile
