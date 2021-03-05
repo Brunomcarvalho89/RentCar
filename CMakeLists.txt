@@ -2,8 +2,7 @@
 cmake_minimum_required(VERSION 3.17)
 
 # set the project name
-#PROJECT(carrental)
-#project(carrental VERSION 1.0.0 LANGUAGES CXX)
+#project(RentCar VERSION 1.0.0 LANGUAGES CXX)
 PROJECT(RentCar CXX)
 
 #set(LIBRARY_NAME RentCar1)

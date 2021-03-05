@@ -1,6 +1,6 @@
 /* 
  * File:   CarClassification.hpp
- * Author: bruno
+ * Author: brunomcarvalho89@gmail.com
  *
  * Created on 27 de janeiro de 2021, 13:53
  */

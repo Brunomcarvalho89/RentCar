@@ -1,6 +1,6 @@
 /* 
  * File:   AbstractPersonRepository.hpp
- * Author: bruno
+ * Author: brunomcarvalho89@gmail.com
  *
  * Created on 19 de fevereiro de 2021, 10:38
  */

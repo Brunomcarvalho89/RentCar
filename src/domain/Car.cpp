@@ -1,6 +1,6 @@
 /* 
  * File:   Car.cpp
- * Author: bruno
+ * Author: brunomcarvalho89@gmail.com
  * 
  * Created on 28 de janeiro de 2021, 10:41
  */
